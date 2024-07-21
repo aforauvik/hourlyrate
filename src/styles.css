@@ -1,0 +1,139 @@
+* {
+	font-family: "Open Sans";
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #fafafa;
+	height: 100vh;
+}
+
+.App {
+	font-family: "Open Sans";
+	/* text-align: center; */
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	margin: 40px auto 0px auto;
+	width: 380px;
+	padding: 24px 24px;
+	background: #ffffff;
+	box-shadow: 0px 15px 60px -10px rgba(16, 25, 50, 0.05);
+	border-radius: 16px;
+	gap: 24px;
+}
+
+h1 {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 28px;
+	text-align: left;
+	color: #141b30;
+}
+
+p {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: left;
+	color: #141b30;
+}
+
+label {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: left;
+	color: #141b30;
+}
+
+.input {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 8px;
+}
+
+.all-input {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 8px;
+}
+
+input {
+	font-family: "Open Sans";
+	width: 343px;
+	height: 56px;
+	font-size: 16px;
+	line-height: 24px;
+	box-sizing: border-box;
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 8px;
+	padding: 16px 16px;
+}
+
+.all-items {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 16px;
+	gap: 24px;
+	background: #fafafa;
+	border-radius: 16px;
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+}
+
+.App-header {
+	/* Auto layout */
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 4px;
+}
+
+.total {
+	font-family: "Open Sans";
+	font-size: 20px;
+	line-height: 32px;
+	font-weight: 500;
+	box-sizing: border-box;
+	border: 1px solid #e2e8f0;
+	border-radius: 8px;
+	padding: 16px 16px;
+	width: 343px;
+	margin-top: 8px;
+}
+
+.totallabel {
+	font-family: "Open Sans";
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 500;
+}
+
+.footer {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 18px;
+	text-align: left;
+	color: #718096;
+}
+
+a {
+	color: #dc5341;
+	text-decoration: none;
+}
