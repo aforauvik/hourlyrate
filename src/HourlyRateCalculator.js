@@ -96,7 +96,7 @@ function HourlyRateCalculator() {
 			</div>
 
 			<p className="footer">
-				CopyRight © {currentYear} | Developed By{" "}
+				© {currentYear} | Developed By{" "}
 				<a target="blank" href="https://www.auvik.me/">
 					Auvik Mir
 				</a>
