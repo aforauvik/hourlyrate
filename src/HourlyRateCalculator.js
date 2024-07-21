@@ -35,76 +35,79 @@ function HourlyRateCalculator() {
 	const currentYear = currentDate.getFullYear();
 
 	return (
-		<div className="all-items">
-			<div className="all-input">
-				<div className="input">
-					<div className="icons">
-						{/* <img src={Clock} /> */}
-						<label className="titles">Hour</label>
+		<div>
+			{message && <div className="message">{message}</div>}
+
+			<div className="all-items">
+				<div className="all-input">
+					<div className="input">
+						<div className="icons">
+							{/* <img src={Clock} /> */}
+							<label className="titles">Hour</label>
+						</div>
+						<input
+							type="number"
+							pattern="[0-9]*"
+							inputmode="numeric"
+							placeholder="Hours worked"
+							value={hours}
+							onChange={(e) => setHours(e.target.value)}
+						/>
 					</div>
-					<input
-						type="number"
-						pattern="[0-9]*"
-						inputmode="numeric"
-						placeholder="Hours worked"
-						value={hours}
-						onChange={(e) => setHours(e.target.value)}
-					/>
+
+					<div className="input">
+						<div className="icons">
+							{/* <img src={Clock} /> */}
+							<label>Minute</label>
+						</div>
+						<input
+							type="number"
+							pattern="[0-9]*"
+							inputmode="numeric"
+							placeholder="Minutes worked"
+							value={minutes}
+							onChange={(e) => setMinutes(e.target.value)}
+						/>
+					</div>
+					<div className="input">
+						<div className="icons">
+							{/* <img src={Rate} /> */}
+							<label>Hourly Rate</label>
+						</div>
+						<input
+							type="number"
+							pattern="[0-9]*"
+							inputmode="numeric"
+							placeholder="Hourly rate"
+							value={rate}
+							onChange={(e) => setRate(e.target.value)}
+						/>
+					</div>
 				</div>
 
-				<div className="input">
-					<div className="icons">
-						{/* <img src={Clock} /> */}
-						<label>Minute</label>
+				<div>
+					<div className="copyearnings" onClick={copyToClipboard}>
+						<div className="icons">
+							<label className="totallabel">Total Earnings</label>
+							<a>
+								<img src={Clip} />
+							</a>
+						</div>
+
+						{total !== null && <div className="total">${total.toFixed(2)}</div>}
 					</div>
-					<input
-						type="number"
-						pattern="[0-9]*"
-						inputmode="numeric"
-						placeholder="Minutes worked"
-						value={minutes}
-						onChange={(e) => setMinutes(e.target.value)}
-					/>
+
+					<button onClick={resetValues}>Reset</button>
 				</div>
-				<div className="input">
-					<div className="icons">
-						{/* <img src={Rate} /> */}
-						<label>Hourly Rate</label>
-					</div>
-					<input
-						type="number"
-						pattern="[0-9]*"
-						inputmode="numeric"
-						placeholder="Hourly rate"
-						value={rate}
-						onChange={(e) => setRate(e.target.value)}
-					/>
-				</div>
+
+				<p className="footer">
+					© {currentYear} | Developed By{" "}
+					<a target="blank" href="https://www.auvik.me/">
+						Auvik Mir
+					</a>
+					, North Carolina
+				</p>
 			</div>
-
-			<div>
-				<div className="copyearnings" onClick={copyToClipboard}>
-					<div className="icons">
-						<label className="totallabel">Total Earnings</label>
-						<a>
-							<img src={Clip} />
-						</a>
-					</div>
-
-					{total !== null && <div className="total">${total.toFixed(2)}</div>}
-					{message && <div className="message">{message}</div>}
-				</div>
-
-				<button onClick={resetValues}>Reset</button>
-			</div>
-
-			<p className="footer">
-				© {currentYear} | Developed By{" "}
-				<a target="blank" href="https://www.auvik.me/">
-					Auvik Mir
-				</a>
-				, North Carolina
-			</p>
 		</div>
 	);
 }
