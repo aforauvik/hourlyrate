@@ -8,6 +8,7 @@ function HourlyRateCalculator() {
 	const [minutes, setMinutes] = useState("");
 	const [rate, setRate] = useState("");
 	const [total, setTotal] = useState(null);
+	const [message, setMessage] = useState("");
 
 	useEffect(() => {
 		const totalHours = parseFloat(hours || 0) + parseFloat(minutes || 0) / 60;
@@ -22,10 +23,18 @@ function HourlyRateCalculator() {
 		setTotal(null);
 	};
 
+	// const copyToClipboard = () => {
+	// 	if (total !== null) {
+	// 		navigator.clipboard.writeText(total.toFixed(2));
+	// 		alert("Total amount copied to clipboard!");
+	// 	}
+	// };
+
 	const copyToClipboard = () => {
 		if (total !== null) {
 			navigator.clipboard.writeText(total.toFixed(2));
-			alert("Total amount copied to clipboard!");
+			setMessage("Total earnings copied to the clipboard");
+			setTimeout(() => setMessage(""), 3000);
 		}
 	};
 
@@ -90,6 +99,7 @@ function HourlyRateCalculator() {
 					</div>
 
 					{total !== null && <div className="total">${total.toFixed(2)}</div>}
+					{message && <div className="message">{message}</div>}
 				</div>
 
 				<button onClick={resetValues}>Reset</button>

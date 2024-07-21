@@ -141,6 +141,43 @@ input:focus {
 .copyearnings:hover {
 	cursor: pointer;
 }
+.message {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	background-color: #43aa8b;
+	margin: 16px auto auto auto;
+	color: white;
+	border-radius: 8px;
+	padding: 16px 40px;
+	position: fixed;
+	top: 0;
+	/* width: 343px; */
+	z-index: 1000;
+	font-family: "Open Sans";
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	animation: slideDown 0.5s forwards, fadeOut 0.5s 2.5s forwards;
+}
+
+@keyframes slideDown {
+	from {
+		top: -50px;
+	}
+	to {
+		top: 0;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		top: 0;
+	}
+	to {
+		top: -80px;
+	}
+}
 
 .footer {
 	font-family: "Open Sans";
