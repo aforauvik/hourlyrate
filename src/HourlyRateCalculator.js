@@ -23,17 +23,10 @@ function HourlyRateCalculator() {
 		setTotal(null);
 	};
 
-	// const copyToClipboard = () => {
-	// 	if (total !== null) {
-	// 		navigator.clipboard.writeText(total.toFixed(2));
-	// 		alert("Total amount copied to clipboard!");
-	// 	}
-	// };
-
 	const copyToClipboard = () => {
 		if (total !== null) {
 			navigator.clipboard.writeText(total.toFixed(2));
-			setMessage("Total earnings copied to the clipboard");
+			setMessage("Amount copied to the clipboard");
 			setTimeout(() => setMessage(""), 4000);
 		}
 	};
