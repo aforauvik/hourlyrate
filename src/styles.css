@@ -6,7 +6,6 @@
 
 body {
 	background-color: #fafafa;
-	height: 100vh;
 }
 
 .App {
@@ -15,7 +14,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	/* align-items: center; */
-	margin: 40px auto 0px auto;
+	margin: 24px auto 0px auto;
 	width: 380px;
 	padding: 24px 24px;
 	background: #ffffff;
@@ -66,7 +65,7 @@ label {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	gap: 16px;
+	gap: 8px;
 }
 
 input {
@@ -114,6 +113,7 @@ input {
 	padding: 16px 16px;
 	width: 343px;
 	margin-top: 8px;
+	color: #dc5341;
 }
 
 .totallabel {
@@ -121,6 +121,7 @@ input {
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 500;
+	color: #dc5341;
 }
 
 .footer {
@@ -136,4 +137,36 @@ input {
 a {
 	color: #dc5341;
 	text-decoration: none;
+}
+
+button {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 16px 24px;
+	gap: 8px;
+
+	width: 343px;
+
+	background: #dc5341;
+	border-radius: 8px;
+	border: none;
+
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: #ffffff;
+	margin-top: 24px;
+	transition: 500ms;
+}
+
+button:hover {
+	transition: 500ms;
+	opacity: 85%;
 }

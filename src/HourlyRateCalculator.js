@@ -12,6 +12,13 @@ function HourlyRateCalculator() {
 		setTotal(totalAmount);
 	}, [hours, minutes, rate]);
 
+	const resetValues = () => {
+		setHours("");
+		setMinutes("");
+		setRate("");
+		setTotal(null);
+	};
+
 	const currentDate = new Date();
 	const currentYear = currentDate.getFullYear();
 
@@ -22,6 +29,8 @@ function HourlyRateCalculator() {
 					<label className="titles">Hour</label>
 					<input
 						type="number"
+						pattern="[0-9]*"
+						inputmode="numeric"
 						placeholder="Hours worked"
 						value={hours}
 						onChange={(e) => setHours(e.target.value)}
@@ -32,6 +41,8 @@ function HourlyRateCalculator() {
 					<label>Minute</label>
 					<input
 						type="number"
+						pattern="[0-9]*"
+						inputmode="numeric"
 						placeholder="Minutes worked"
 						value={minutes}
 						onChange={(e) => setMinutes(e.target.value)}
@@ -41,6 +52,8 @@ function HourlyRateCalculator() {
 					<label>Hourly Rate</label>
 					<input
 						type="number"
+						pattern="[0-9]*"
+						inputmode="numeric"
 						placeholder="Hourly rate"
 						value={rate}
 						onChange={(e) => setRate(e.target.value)}
@@ -51,6 +64,7 @@ function HourlyRateCalculator() {
 			<div>
 				<label className="totallabel">Total Earnings</label>
 				{total !== null && <div className="total">${total.toFixed(2)}</div>}
+				<button onClick={resetValues}>Reset</button>
 			</div>
 
 			<p className="footer">
