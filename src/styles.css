@@ -53,6 +53,13 @@ label {
 	color: #141b30;
 }
 
+.icons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 4px;
+}
+
 .input {
 	display: flex;
 	flex-direction: column;
@@ -79,6 +86,13 @@ input {
 	border: 1px solid #e2e8f0;
 	border-radius: 8px;
 	padding: 16px 16px;
+	transition: 500ms;
+}
+
+input:focus {
+	outline: none !important;
+	border: 1px solid #dc5341;
+	transition: 500ms;
 }
 
 .all-items {
@@ -122,6 +136,10 @@ input {
 	line-height: 24px;
 	font-weight: 500;
 	color: #dc5341;
+}
+
+.copyearnings:hover {
+	cursor: pointer;
 }
 
 .footer {

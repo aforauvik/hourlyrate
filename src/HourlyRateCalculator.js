@@ -1,4 +1,7 @@
 import React, {useState, useEffect} from "react";
+import Clock from "./timer.svg";
+import Rate from "./rate.svg";
+import Clip from "./clipboard.svg";
 
 function HourlyRateCalculator() {
 	const [hours, setHours] = useState("");
@@ -19,6 +22,13 @@ function HourlyRateCalculator() {
 		setTotal(null);
 	};
 
+	const copyToClipboard = () => {
+		if (total !== null) {
+			navigator.clipboard.writeText(total.toFixed(2));
+			alert("Total amount copied to clipboard!");
+		}
+	};
+
 	const currentDate = new Date();
 	const currentYear = currentDate.getFullYear();
 
@@ -26,7 +36,10 @@ function HourlyRateCalculator() {
 		<div className="all-items">
 			<div className="all-input">
 				<div className="input">
-					<label className="titles">Hour</label>
+					<div className="icons">
+						{/* <img src={Clock} /> */}
+						<label className="titles">Hour</label>
+					</div>
 					<input
 						type="number"
 						pattern="[0-9]*"
@@ -38,7 +51,10 @@ function HourlyRateCalculator() {
 				</div>
 
 				<div className="input">
-					<label>Minute</label>
+					<div className="icons">
+						{/* <img src={Clock} /> */}
+						<label>Minute</label>
+					</div>
 					<input
 						type="number"
 						pattern="[0-9]*"
@@ -49,7 +65,10 @@ function HourlyRateCalculator() {
 					/>
 				</div>
 				<div className="input">
-					<label>Hourly Rate</label>
+					<div className="icons">
+						{/* <img src={Rate} /> */}
+						<label>Hourly Rate</label>
+					</div>
 					<input
 						type="number"
 						pattern="[0-9]*"
@@ -62,8 +81,17 @@ function HourlyRateCalculator() {
 			</div>
 
 			<div>
-				<label className="totallabel">Total Earnings</label>
-				{total !== null && <div className="total">${total.toFixed(2)}</div>}
+				<div className="copyearnings" onClick={copyToClipboard}>
+					<div className="icons">
+						<label className="totallabel">Total Earnings</label>
+						<a>
+							<img src={Clip} />
+						</a>
+					</div>
+
+					{total !== null && <div className="total">${total.toFixed(2)}</div>}
+				</div>
+
 				<button onClick={resetValues}>Reset</button>
 			</div>
 
