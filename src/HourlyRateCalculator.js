@@ -34,7 +34,7 @@ function HourlyRateCalculator() {
 		if (total !== null) {
 			navigator.clipboard.writeText(total.toFixed(2));
 			setMessage("Total earnings copied to the clipboard");
-			setTimeout(() => setMessage(""), 3000);
+			setTimeout(() => setMessage(""), 4000);
 		}
 	};
 
