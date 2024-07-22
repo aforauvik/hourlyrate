@@ -1,8 +1,8 @@
-Hourly Rate Converter Tool
+    Hour To Money Calculator
 
     Calculate Your Earnings with Ease
 
-    Use our Hourly Rate Converter to accurately calculate your earnings based on hours and minutes worked at a specific
+    Use our Hour To Money Calculator to accurately calculate your earnings based on hours and minutes worked at a specific
     hourly rate. This tool is perfect for freelancers, consultants, and contractors who need a quick and reliable way to
     determine their income for various projects. Simply enter the hours, minutes, and hourly rate to get an instant
     total.
@@ -27,6 +27,7 @@ Hourly Rate Converter Tool
 
     Keywords:
 
+    - Hour To Money Calculator
     - Hourly rate calculator
     - Freelance earnings calculator
     - Contractor income estimator

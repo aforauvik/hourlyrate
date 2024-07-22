@@ -6,7 +6,7 @@ function App() {
 	return (
 		<div className="App">
 			<header className="App-header">
-				<h1>Simple Hourly Rate Converter</h1>
+				<h1>Hour To Money Calculator</h1>
 				<p>Calculate your earnings</p>
 			</header>
 
